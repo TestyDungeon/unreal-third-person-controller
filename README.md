@@ -4,7 +4,7 @@
 
 ## 💡 Overview
 
-UE5 learning project. Made a third-person character from scrath, without UE template.
+UE5 learning project. Made a third-person character from scratch, without UE template.
 
 ![Demo](demogif.gif)
 
