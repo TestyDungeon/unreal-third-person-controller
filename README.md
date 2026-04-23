@@ -6,7 +6,7 @@
 
 UE5 learning project. Made a third-person character from scratch, without UE template.
 
-![Demo](demogif.gif)
+
 
 
 ## ✨ Features so far
