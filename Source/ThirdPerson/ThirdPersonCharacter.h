@@ -32,8 +32,12 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
 	UInputAction* JumpAction;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
+	UInputAction* AttackAction;
+
 	void Move(const FInputActionValue& Value);
 	void CameraLook(const FInputActionValue& Value);
+	void Attack(const FInputActionValue& Value);
 
 public:	
 	// Called every frame
@@ -41,6 +45,9 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	UPROPERTY(BlueprintReadOnly, Category = "Combat")
+	bool bIsAttacking = false;
 
 private:
 
@@ -53,5 +60,9 @@ public:
 
 	FORCEINLINE USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	FORCEINLINE UCameraComponent* GetPlayerCamera() const { return PlayerCamera; }
+
+	bool GetIsAttacking() const { return bIsAttacking; }
+	UFUNCTION(BlueprintCallable, Category = "Combat")
+	void ResetAttack() { bIsAttacking = false; }
 
 };

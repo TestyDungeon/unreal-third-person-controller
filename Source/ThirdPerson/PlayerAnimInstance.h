@@ -42,4 +42,8 @@ private:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AnimationProperties", meta = (AllowPrivateAccess = "true"))
 	bool bIsJumping = false;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AnimationProperties", meta = (AllowPrivateAccess = "true"))
+	bool bIsAttacking = false;
+
 };

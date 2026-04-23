@@ -73,6 +73,12 @@ void AThirdPersonCharacter::CameraLook(const FInputActionValue& Value)
 	}
 }
 
+void AThirdPersonCharacter::Attack(const FInputActionValue& Value)
+{
+	bIsAttacking = Value.Get<bool>();
+	UE_LOG(LogTemp, Log, TEXT("Normal log"));
+}
+
 // Called every frame
 void AThirdPersonCharacter::Tick(float DeltaTime)
 {
@@ -89,6 +95,7 @@ void AThirdPersonCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInp
 		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AThirdPersonCharacter::Move);
 		EnhancedInputComponent->BindAction(CameraLookAction, ETriggerEvent::Triggered, this, &AThirdPersonCharacter::CameraLook);
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Triggered, this, &ACharacter::Jump);
+		EnhancedInputComponent->BindAction(AttackAction, ETriggerEvent::Triggered, this, &AThirdPersonCharacter::Attack);
 	}
 
 }

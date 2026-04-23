@@ -42,4 +42,6 @@ void UPlayerAnimInstance::UpdateAnimationProperties(float DeltaTime)
 	bIsMoving = Speed > 0.0f;
 
 	bIsJumping = Player->bPressedJump;
+
+	bIsAttacking = Player->bIsAttacking;
 }
