@@ -6,7 +6,8 @@
 
 UE5 learning project. Made a third-person character from scratch, without UE template.
 
-![Demo](demovideo.gif)
+## Video
+[![Video](https://img.youtube.com/vi/BDij__AH2is/0.jpg)](https://www.youtube.com/watch?v=BDij__AH2is)
 
 
 ## ✨ Features so far
