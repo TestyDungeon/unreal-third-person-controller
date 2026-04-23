@@ -6,11 +6,12 @@
 
 UE5 learning project. Made a third-person character from scratch, without UE template.
 
-
+![Demo](demovideo.gif)
 
 
 ## ✨ Features so far
 - Input handling
 - Camera rotation with spring arm
-- Movement, rotation and jumps
+- Movement and jumps
+- Attack
 - Animations
